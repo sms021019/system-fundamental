@@ -1,0 +1,761 @@
+src/bacon.c: In function ‘encrypt’:
+src/bacon.c:48:26: warning: implicit declaration of function ‘indexOf’; did you mean ‘index’? [-Wimplicit-function-declaration]
+   48 |         int indexValue = indexOf(alphabet, inputText[i]);
+      |                          ^~~~~~~
+      |                          index
+src/bacon.c:69:13: warning: implicit declaration of function ‘reverse’ [-Wimplicit-function-declaration]
+   69 |             reverse(binstr);
+      |             ^~~~~~~
+src/bacon.c:86:14: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+   86 |     while (a < strlen(binstrfin)) {
+      |              ^
+src/bacon.c: In function ‘decrypt’:
+src/bacon.c:121:8: warning: implicit declaration of function ‘errorCheck2’ [-Wimplicit-function-declaration]
+  121 |     if(errorCheck2(ciphertext) == -2){
+      |        ^~~~~~~~~~~
+src/bacon.c:130:18: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  130 |     for(i = 0; i < strlen(ciphertext); i++){
+      |                  ^
+src/bacon.c:157:23: warning: implicit declaration of function ‘firstSixBits’ [-Wimplicit-function-declaration]
+  157 |         int tempNum = firstSixBits(binstr);
+      |                       ^~~~~~~~~~~~
+src/bacon.c:163:9: warning: implicit declaration of function ‘removeFirstSixBits’ [-Wimplicit-function-declaration]
+  163 |         removeFirstSixBits(binstr);
+      |         ^~~~~~~~~~~~~~~~~~
+src/bacon.c: At top level:
+src/bacon.c:196:6: warning: conflicting types for ‘removeFirstSixBits’; have ‘void(char *)’
+  196 | void removeFirstSixBits(char* binary) {
+      |      ^~~~~~~~~~~~~~~~~~
+src/bacon.c:163:9: note: previous implicit declaration of ‘removeFirstSixBits’ with type ‘void(char *)’
+  163 |         removeFirstSixBits(binstr);
+      |         ^~~~~~~~~~~~~~~~~~
+src/bacon.c: In function ‘indexOf’:
+src/bacon.c:210:20: warning: comparison between pointer and integer
+  210 |         if (str[i] == c) {
+      |                    ^~
+src/bacon.c: At top level:
+src/bacon.c:217:6: warning: conflicting types for ‘reverse’; have ‘void(char *)’
+  217 | void reverse(char str[]) {
+      |      ^~~~~~~
+src/bacon.c:69:13: note: previous implicit declaration of ‘reverse’ with type ‘void(char *)’
+   69 |             reverse(binstr);
+      |             ^~~~~~~
+[----] Criterion v2.4.0
+[====] Running 7 tests from base_output:
+[RUN ] base_output::decrypt_full_msg
+[----]   A full plaintext message was encrypted.
+[----] ../../../tests/unit_tests.c:46: Assertion Failed
+[----]   
+[----]   plaintext was:           ,,ROBERT FIRTH\0yU`
+[----]   but it should have been: --ROBERT FIRTH
+[----]   
+[FAIL] base_output::decrypt_full_msg: (0.00s)
+[RUN ] base_output::decrypt_partial_msg
+[----]   The plaintext is not large enough to accommodate the entire ciphertext.
+[----] ../../../tests/unit_tests.c:46: Assertion Failed
+[----]   
+[----]   plaintext was:           ,,ROBERT FIRTH\0'
+[----]   but it should have been: --ROBERT
+[----]   
+*** stack smashing detected ***: terminated
+[----] ../../../tests/unit_tests.c:46: Unexpected signal caught below this line!
+[FAIL] base_output::decrypt_partial_msg: CRASH!
+[RUN ] base_output::decrypt_three_chars
+[----]   Ciphertext string encoded only three characters.
+[----] ../../../tests/unit_tests.c:46: Assertion Failed
+[----]   
+[----]   plaintext was:           STO\0$D#]
+[----]   but it should have been: STO
+[----]   
+[FAIL] base_output::decrypt_three_chars: (0.00s)
+[RUN ] base_output::encrypt_EOM_only
+[----]   Ciphertext string has room only for EOM.
+[PASS] base_output::encrypt_EOM_only: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: STONY BROOK UNIVERSITY
+[RUN ] base_output::encrypt_empty_string
+[----]   Plaintext is the empty string.
+[----] ../../../tests/unit_tests.c:50: Assertion Failed
+[----]   
+[----]   ciphertext was:          2023 United States of America
+[----]   but it should have been: 2023 UNITED States of America
+[----]   
+[FAIL] base_output::encrypt_empty_string: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: 
+indexOf input text: -1
+returned -1
+[RUN ] base_output::encrypt_full_msg
+[----]   A full plaintext message can be encrypted.
+[----] ../../../tests/unit_tests.c:50: Assertion Failed
+[----]   
+[----]   ciphertext was:          One of the main causes of the fall of the Roman Empire was that lacking zero, they had no way to indicate successful termination of their C programs.
+[----]   but it should have been: One Of THe mAiN cAuseS of THE fall of The rOman EmpiRe Was THaT LaCking ZeRo, tHey haD no wAy To iNDicaTE SUCCESSful termination of their C programs.
+[----]   
+[FAIL] base_output::encrypt_full_msg: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: --ROBERT FIRTH
+indexOf input text: 38
+indexOf input text: 38
+indexOf input text: 17
+indexOf input text: 14
+indexOf input text: 1
+indexOf input text: 4
+indexOf input text: 17
+indexOf input text: 19
+indexOf input text: 26
+indexOf input text: 5
+indexOf input text: 8
+indexOf input text: 17
+indexOf input text: 19
+indexOf input text: 7
+indexOf input text: -1
+returned -1
+[RUN ] base_output::encrypt_three_chars
+[----]   Ciphertext string has room only for three characters.
+[PASS] base_output::encrypt_three_chars: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: STONY BROOK UNIVERSITY
+indexOf input text: 18
+indexOf input text: 19
+indexOf input text: 14
+[====] Running 7 tests from base_return:
+[RUN ] base_return::decrypt_full_msg
+[----]   A full plaintext message was encrypted.
+[PASS] base_return::decrypt_full_msg: (0.00s)
+[RUN ] base_return::decrypt_partial_msg
+[----]   A full plaintext message was encrypted.
+[----] ../../../tests/unit_tests.c:54: Assertion Failed
+[----]   
+[----]   Return value was 14, but it should have been 8.
+[----]   
+*** stack smashing detected ***: terminated
+[----] ../../../tests/unit_tests.c:54: Unexpected signal caught below this line!
+[FAIL] base_return::decrypt_partial_msg: CRASH!
+[RUN ] base_return::decrypt_three_chars
+[----]   Ciphertext string encoded only three characters.
+[PASS] base_return::decrypt_three_chars: (0.00s)
+[RUN ] base_return::encrypt_EOM_only
+[----]   Ciphertext string has room only for EOM.
+[PASS] base_return::encrypt_EOM_only: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: STONY BROOK UNIVERSITY
+[RUN ] base_return::encrypt_empty_string
+[----]   Plaintext is the empty string.
+[----] ../../../tests/unit_tests.c:54: Assertion Failed
+[----]   
+[----]   Return value was -1, but it should have been 0.
+[----]   
+[FAIL] base_return::encrypt_empty_string: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: 
+indexOf input text: -1
+returned -1
+[RUN ] base_return::encrypt_full_msg
+[----]   A full plaintext message can be encrypted.
+[----] ../../../tests/unit_tests.c:54: Assertion Failed
+[----]   
+[----]   Return value was -1, but it should have been 14.
+[----]   
+[FAIL] base_return::encrypt_full_msg: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: --ROBERT FIRTH
+indexOf input text: 38
+indexOf input text: 38
+indexOf input text: 17
+indexOf input text: 14
+indexOf input text: 1
+indexOf input text: 4
+indexOf input text: 17
+indexOf input text: 19
+indexOf input text: 26
+indexOf input text: 5
+indexOf input text: 8
+indexOf input text: 17
+indexOf input text: 19
+indexOf input text: 7
+indexOf input text: -1
+returned -1
+[RUN ] base_return::encrypt_three_chars
+[----]   Ciphertext string has room only for three characters.
+[PASS] base_return::encrypt_three_chars: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: STONY BROOK UNIVERSITY
+indexOf input text: 18
+indexOf input text: 19
+indexOf input text: 14
+[====] Running 7 tests from base_valgrind:
+[RUN ] base_valgrind::decrypt_full_msg_valgrind
+[PASS] base_valgrind::decrypt_full_msg_valgrind: (0.55s)
+[RUN ] base_valgrind::decrypt_partial_msg_valgrind
+[PASS] base_valgrind::decrypt_partial_msg_valgrind: (1.38s)
+[RUN ] base_valgrind::decrypt_three_chars_valgrind
+[PASS] base_valgrind::decrypt_three_chars_valgrind: (0.48s)
+[RUN ] base_valgrind::encrypt_EOM_only_valgrind
+[PASS] base_valgrind::encrypt_EOM_only_valgrind: (0.49s)
+[RUN ] base_valgrind::encrypt_empty_string_valgrind
+[PASS] base_valgrind::encrypt_empty_string_valgrind: (0.54s)
+[RUN ] base_valgrind::encrypt_full_msg_valgrind
+[PASS] base_valgrind::encrypt_full_msg_valgrind: (0.53s)
+[RUN ] base_valgrind::encrypt_three_chars_valgrind
+[PASS] base_valgrind::encrypt_three_chars_valgrind: (0.52s)
+[====] Running 6 tests from grading_no_output:
+[RUN ] grading_no_output::decrypt_empty_msg
+[----]   Plaintext is an empty string.
+[PASS] grading_no_output::decrypt_empty_msg: (0.50s)
+[RUN ] grading_no_output::decrypt_invalid_msg
+[----]   Ciphertext contains invalid Bacon codes.
+[----] ../../../tests/unit_tests.c:46: Assertion Failed
+[----]   
+[----]   plaintext was:           Mtony Brook University
+[----]   but it should have been: Stony Brook University
+[----]   
+[FAIL] grading_no_output::decrypt_invalid_msg: (0.47s)
+[RUN ] grading_no_output::decrypt_no_EOM1
+[----]   No EOM marker present in ciphertext.
+[----] ../../../tests/unit_tests.c:46: Assertion Failed
+[----]   
+[----]   plaintext was:           !"#$%'(,.9;&)\0}5Ј�L�
+[----]   but it should have been: computing
+[----]   
+[----] ../../../tests/grading_tests.c:321: Assertion Failed
+[----]   
+[----]   Return value was 13, but it should have been -2.
+[----]   
+*** stack smashing detected ***: terminated
+[----] ../../../tests/unit_tests.c:37: Unexpected signal caught below this line!
+[FAIL] grading_no_output::decrypt_no_EOM1: CRASH!
+[RUN ] grading_no_output::decrypt_no_EOM2
+[----]   No EOM present in ciphertext, but six consecutive uppercase letters are present.
+[----] ../../../tests/unit_tests.c:46: Assertion Failed
+[----]   
+[----]   plaintext was:           Hardware
+[----]   but it should have been: hardware
+[----]   
+[----] ../../../tests/grading_tests.c:333: Assertion Failed
+[----]   
+[----]   Return value was -3, but it should have been -2.
+[----]   
+[FAIL] grading_no_output::decrypt_no_EOM2: (0.49s)
+[RUN ] grading_no_output::encrypt_ciph_all_non_letters
+[----]   Ciphertext contains only non-letters
+[PASS] grading_no_output::encrypt_ciph_all_non_letters: (0.51s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: JANUARY 1, 2023!
+indexOf input text: 9
+indexOf input text: 0
+indexOf input text: 13
+indexOf input text: 20
+indexOf input text: 0
+indexOf input text: 17
+indexOf input text: 24
+indexOf input text: 26
+indexOf input text: 42
+indexOf input text: 37
+indexOf input text: 26
+indexOf input text: 43
+indexOf input text: 41
+indexOf input text: 43
+indexOf input text: 44
+indexOf input text: 27
+indexOf input text: -1
+returned -1
+[RUN ] grading_no_output::encrypt_insufficient_space
+[----]   Ciphertext string too small to store the EOM marker.
+[PASS] grading_no_output::encrypt_insufficient_space: (0.50s)
+[====] Running 13 tests from grading_output:
+[RUN ] grading_output::decrypt_eom_in_middle
+[----]   EOM is in the middle of the ciphertext, with another one later in the ciphertext
+[----] ../../../tests/unit_tests.c:46: Assertion Failed
+[----]   
+[----]   plaintext was:           W>NZI6:)A.0TOt3JevC65M)4:?aU';#]X*qZ?0
+[----]   but it should have been: UPSIDE-DOWN!
+[----]   
+[FAIL] grading_output::decrypt_eom_in_middle: (0.00s)
+[RUN ] grading_output::decrypt_full_msg1
+[----]   A full plaintext message was encrypted.
+[----] ../../../tests/unit_tests.c:46: Assertion Failed
+[----]   
+[----]   plaintext was:           W>NZI6:)A.0TOt3Je
+[----]   but it should have been: DOUG GWYN QUOTE
+[----]   
+[FAIL] grading_output::decrypt_full_msg1: (0.00s)
+[RUN ] grading_output::decrypt_full_msg2
+[----]   A full plaintext message was encrypted.
+[----] ../../../tests/unit_tests.c:46: Assertion Failed
+[----]   
+[----]   plaintext was:           W>NZI6:)A.0TOt3JevC65M)4:?aU
+[----]   but it should have been: 7/4/2023 CELEBRATE!
+[----]   
+[FAIL] grading_output::decrypt_full_msg2: (0.00s)
+[RUN ] grading_output::decrypt_full_msg3
+[----]   A full plaintext message was encrypted. Ciphertext starts with non-letters.
+[----] ../../../tests/unit_tests.c:46: Assertion Failed
+[----]   
+[----]   plaintext was:           W>NZI6:)A.0TOt3JevC65M)4:?aU
+[----]   but it should have been: 7/4/2023 CELEBRATE!
+[----]   
+[FAIL] grading_output::decrypt_full_msg3: (0.00s)
+[RUN ] grading_output::decrypt_partial_msg
+[----]   The plaintext is not large enough to accommodate the entire ciphertext.
+[----] ../../../tests/unit_tests.c:46: Assertion Failed
+[----]   
+[----]   plaintext was:           Knmc8I7`6
+[----]   but it should have been: DOUG GWYN
+[----]   
+[FAIL] grading_output::decrypt_partial_msg: (0.00s)
+[RUN ] grading_output::decrypt_symbols
+[----]   Plaintext contained only symbols.
+[----] ../../../tests/unit_tests.c:46: Assertion Failed
+[----]   
+[----]   plaintext was:           !"#$%'(,.9;&)-:\0
+[----]   but it should have been: !#$%&()-/:?',.;
+[----]   
+[FAIL] grading_output::decrypt_symbols: (0.00s)
+[RUN ] grading_output::encrypt_EOM_only
+[----]   Ciphertext string has room only for EOM.
+[----] ../../../tests/unit_tests.c:50: Assertion Failed
+[----]   
+[----]   ciphertext was:          123 Cat DOG BIRd 456
+[----]   but it should have been: 123 CAT DOG bird 456
+[----]   
+[FAIL] grading_output::encrypt_EOM_only: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: MESSAGE
+indexOf input text: 12
+[RUN ] grading_output::encrypt_ciph_all_letters
+[----]   Ciphertext contains only letters.
+[----] ../../../tests/unit_tests.c:50: Assertion Failed
+[----]   
+[----]   ciphertext was:          aaaaaaaaaabbbbbbbbbbbbbccccccccccddddddddddddeeeeeeeeeeeeffffffffffffffggggggggggggggghhhhhhhhhhhhhiiiiiiiiiiiiiiijjjjjjjjjjjjjj
+[----]   but it should have been: aaAaaAaaaabbbbBBbBbBbBbccccccccCcddDdDDddddDDeEeEeEeeEEeeFfffFFfFfFfFfFgGgGgggGgGgGgGgHhHHhHHhHHHHHIIIiiiiiiiiiiiijjjjjjjjjjjjjj
+[----]   
+[FAIL] grading_output::encrypt_ciph_all_letters: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: JANUARY 1, 2023!
+indexOf input text: 9
+indexOf input text: 0
+indexOf input text: 13
+indexOf input text: 20
+indexOf input text: 0
+indexOf input text: 17
+indexOf input text: 24
+indexOf input text: 26
+indexOf input text: 42
+indexOf input text: 37
+indexOf input text: 26
+indexOf input text: 43
+indexOf input text: 41
+indexOf input text: 43
+indexOf input text: 44
+indexOf input text: 27
+indexOf input text: -1
+returned -1
+[RUN ] grading_output::encrypt_full_msg1
+[----]   A full plaintext message can be encrypted.
+*** stack smashing detected ***: terminated
+[----] ../../../tests/grading_tests.c:8: Unexpected signal caught below this line!
+[FAIL] grading_output::encrypt_full_msg1: CRASH!
+[RUN ] grading_output::encrypt_full_msg2
+[----]   A full plaintext message can be encrypted.
+[----] ../../../tests/unit_tests.c:50: Assertion Failed
+[----]   
+[----]   ciphertext was:          We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.
+[----]   but it should have been: We HOLD TheSE TRuTHs tO be SELF-eViDeNt, That AlL mEn ArE cREaTEd Equal, tHat thEy are EnDOwed By their cReAtor With certAin UNaliEnabLE rIGHTS, THAt among these are Life, Liberty and the pursuit of Happiness.
+[----]   
+[FAIL] grading_output::encrypt_full_msg2: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: 7/4/2023 CELEBRATE!
+indexOf input text: 48
+indexOf input text: 40
+indexOf input text: 45
+indexOf input text: 40
+indexOf input text: 43
+indexOf input text: 41
+indexOf input text: 43
+indexOf input text: 44
+indexOf input text: 26
+indexOf input text: 2
+indexOf input text: 4
+indexOf input text: 11
+indexOf input text: 4
+indexOf input text: 1
+indexOf input text: 17
+indexOf input text: 0
+indexOf input text: 19
+indexOf input text: 4
+indexOf input text: 27
+indexOf input text: -1
+returned -1
+[RUN ] grading_output::encrypt_full_msg3
+[----]   A full plaintext message can be encrypted. Ciphertext starts with non-letter.
+[----] ../../../tests/unit_tests.c:50: Assertion Failed
+[----]   
+[----]   ciphertext was:          1776: We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.
+[----]   but it should have been: 1776: We HOLD TheSE TRuTHs tO be SELF-eViDeNt, That AlL mEn ArE cREaTEd Equal, tHat thEy are EnDOwed By their cReAtor With certAin UNaliEnabLE rIGHTS, THAt among these are Life, Liberty and the pursuit of Happiness.
+[----]   
+[FAIL] grading_output::encrypt_full_msg3: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: 7/4/2023 CELEBRATE!
+indexOf input text: 48
+indexOf input text: 40
+indexOf input text: 45
+indexOf input text: 40
+indexOf input text: 43
+indexOf input text: 41
+indexOf input text: 43
+indexOf input text: 44
+indexOf input text: 26
+indexOf input text: 2
+indexOf input text: 4
+indexOf input text: 11
+indexOf input text: 4
+indexOf input text: 1
+indexOf input text: 17
+indexOf input text: 0
+indexOf input text: 19
+indexOf input text: 4
+indexOf input text: 27
+indexOf input text: -1
+returned -1
+[RUN ] grading_output::encrypt_one_char
+[----]   Ciphertext string has room only for one character.
+[PASS] grading_output::encrypt_one_char: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: STONY BROOK UNIVERSITY
+indexOf input text: 18
+[RUN ] grading_output::encrypt_symbols
+[----]   Plaintext contains only symbols.
+[----] ../../../tests/unit_tests.c:50: Assertion Failed
+[----]   
+[----]   ciphertext was:          In consultation with a program director, students have the option to select an area of specialization. This allows the student to take a subset of courses, promoting in-depth exploration in the various fields of computer science.
+[----]   but it should have been: iN CoNSuLTAtIoN WITh a PROGRAm direCtor, StUdenTS HavE tHE opTION To sElECt An aRea of SPecIalIzaTIoN. ThiS ALLOWS The student to take a subset of courses, promoting in-depth exploration in the various fields of computer science.
+[----]   
+[FAIL] grading_output::encrypt_symbols: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: !#$%&()-/:?',.;
+indexOf input text: 27
+indexOf input text: 30
+indexOf input text: 31
+indexOf input text: 32
+indexOf input text: 33
+indexOf input text: 35
+indexOf input text: 36
+indexOf input text: 38
+indexOf input text: 40
+indexOf input text: 51
+indexOf input text: 53
+indexOf input text: 34
+indexOf input text: 37
+indexOf input text: 39
+indexOf input text: 52
+indexOf input text: -1
+returned -1
+[====] Running 13 tests from grading_return:
+[RUN ] grading_return::decrypt_eom_in_middle
+[----]   EOM is in the middle of the ciphertext, with another one later in the ciphertext
+[----] ../../../tests/grading_tests.c:297: Assertion Failed
+[----]   
+[----]   Return value was -2, but it should have been 12.
+[----]   
+[FAIL] grading_return::decrypt_eom_in_middle: (0.00s)
+[RUN ] grading_return::decrypt_full_msg1
+[----]   A full plaintext message was encrypted.
+[----] ../../../tests/grading_tests.c:176: Assertion Failed
+[----]   
+[----]   Return value was -2, but it should have been 15.
+[----]   
+[FAIL] grading_return::decrypt_full_msg1: (0.00s)
+[RUN ] grading_return::decrypt_full_msg2
+[----]   A full plaintext message was encrypted.
+[----] ../../../tests/grading_tests.c:200: Assertion Failed
+[----]   
+[----]   Return value was -2, but it should have been 19.
+[----]   
+[FAIL] grading_return::decrypt_full_msg2: (0.00s)
+[RUN ] grading_return::decrypt_full_msg3
+[----]   A full plaintext message was encrypted. Ciphertext starts with non-letters.
+[----] ../../../tests/grading_tests.c:224: Assertion Failed
+[----]   
+[----]   Return value was -2, but it should have been 19.
+[----]   
+[FAIL] grading_return::decrypt_full_msg3: (0.00s)
+[RUN ] grading_return::decrypt_partial_msg
+[----]   The plaintext is not large enough to accommodate the entire ciphertext.
+[----] ../../../tests/grading_tests.c:248: Assertion Failed
+[----]   
+[----]   Return value was -2, but it should have been 9.
+[----]   
+[FAIL] grading_return::decrypt_partial_msg: (0.00s)
+[RUN ] grading_return::decrypt_symbols
+[----]   Plaintext contained only symbols.
+[PASS] grading_return::decrypt_symbols: (0.00s)
+[RUN ] grading_return::encrypt_EOM_only
+[----]   Ciphertext string has room only for EOM.
+[----] ../../../tests/grading_tests.c:104: Assertion Failed
+[----]   
+[----]   Return value was 1, but it should have been 0.
+[----]   
+[FAIL] grading_return::encrypt_EOM_only: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: MESSAGE
+indexOf input text: 12
+[RUN ] grading_return::encrypt_ciph_all_letters
+[----]   Ciphertext contains only letters.
+[----] ../../../tests/grading_tests.c:140: Assertion Failed
+[----]   
+[----]   Return value was -1, but it should have been 16.
+[----]   
+[FAIL] grading_return::encrypt_ciph_all_letters: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: JANUARY 1, 2023!
+indexOf input text: 9
+indexOf input text: 0
+indexOf input text: 13
+indexOf input text: 20
+indexOf input text: 0
+indexOf input text: 17
+indexOf input text: 24
+indexOf input text: 26
+indexOf input text: 42
+indexOf input text: 37
+indexOf input text: 26
+indexOf input text: 43
+indexOf input text: 41
+indexOf input text: 43
+indexOf input text: 44
+indexOf input text: 27
+indexOf input text: -1
+returned -1
+[RUN ] grading_return::encrypt_full_msg1
+[----]   A full plaintext message can be encrypted.
+*** stack smashing detected ***: terminated
+[----] ../../../tests/grading_tests.c:15: Unexpected signal caught below this line!
+[FAIL] grading_return::encrypt_full_msg1: CRASH!
+[RUN ] grading_return::encrypt_full_msg2
+[----]   A full plaintext message can be encrypted.
+[----] ../../../tests/grading_tests.c:38: Assertion Failed
+[----]   
+[----]   Return value was -1, but it should have been 19.
+[----]   
+[FAIL] grading_return::encrypt_full_msg2: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: 7/4/2023 CELEBRATE!
+indexOf input text: 48
+indexOf input text: 40
+indexOf input text: 45
+indexOf input text: 40
+indexOf input text: 43
+indexOf input text: 41
+indexOf input text: 43
+indexOf input text: 44
+indexOf input text: 26
+indexOf input text: 2
+indexOf input text: 4
+indexOf input text: 11
+indexOf input text: 4
+indexOf input text: 1
+indexOf input text: 17
+indexOf input text: 0
+indexOf input text: 19
+indexOf input text: 4
+indexOf input text: 27
+indexOf input text: -1
+returned -1
+[RUN ] grading_return::encrypt_full_msg3
+[----]   A full plaintext message can be encrypted. Ciphertext starts with non-letters.
+[----] ../../../tests/grading_tests.c:56: Assertion Failed
+[----]   
+[----]   Return value was -1, but it should have been 19.
+[----]   
+[FAIL] grading_return::encrypt_full_msg3: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: 7/4/2023 CELEBRATE!
+indexOf input text: 48
+indexOf input text: 40
+indexOf input text: 45
+indexOf input text: 40
+indexOf input text: 43
+indexOf input text: 41
+indexOf input text: 43
+indexOf input text: 44
+indexOf input text: 26
+indexOf input text: 2
+indexOf input text: 4
+indexOf input text: 11
+indexOf input text: 4
+indexOf input text: 1
+indexOf input text: 17
+indexOf input text: 0
+indexOf input text: 19
+indexOf input text: 4
+indexOf input text: 27
+indexOf input text: -1
+returned -1
+[RUN ] grading_return::encrypt_one_char
+[----]   Ciphertext string has room only for one character.
+[PASS] grading_return::encrypt_one_char: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: STONY BROOK UNIVERSITY
+indexOf input text: 18
+[RUN ] grading_return::encrypt_symbols
+[----]   Plaintext contains only symbols.
+[----] ../../../tests/grading_tests.c:122: Assertion Failed
+[----]   
+[----]   Return value was -1, but it should have been 15.
+[----]   
+[FAIL] grading_return::encrypt_symbols: (0.00s)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: !#$%&()-/:?',.;
+indexOf input text: 27
+indexOf input text: 30
+indexOf input text: 31
+indexOf input text: 32
+indexOf input text: 33
+indexOf input text: 35
+indexOf input text: 36
+indexOf input text: 38
+indexOf input text: 40
+indexOf input text: 51
+indexOf input text: 53
+indexOf input text: 34
+indexOf input text: 37
+indexOf input text: 39
+indexOf input text: 52
+indexOf input text: -1
+returned -1
+[====] Running 13 tests from grading_valgrind:
+[RUN ] grading_valgrind::decrypt_eom_in_middle_valgrind
+[PASS] grading_valgrind::decrypt_eom_in_middle_valgrind: (0.47s)
+[RUN ] grading_valgrind::decrypt_full_msg1_valgrind
+[PASS] grading_valgrind::decrypt_full_msg1_valgrind: (0.52s)
+[RUN ] grading_valgrind::decrypt_full_msg2_valgrind
+[PASS] grading_valgrind::decrypt_full_msg2_valgrind: (0.48s)
+[RUN ] grading_valgrind::decrypt_full_msg3_valgrind
+[PASS] grading_valgrind::decrypt_full_msg3_valgrind: (0.52s)
+[RUN ] grading_valgrind::decrypt_partial_msg_valgrind
+[PASS] grading_valgrind::decrypt_partial_msg_valgrind: (0.51s)
+[RUN ] grading_valgrind::decrypt_symbols_valgrind
+[PASS] grading_valgrind::decrypt_symbols_valgrind: (0.50s)
+[RUN ] grading_valgrind::encrypt_EOM_only_valgrind
+[PASS] grading_valgrind::encrypt_EOM_only_valgrind: (0.52s)
+[RUN ] grading_valgrind::encrypt_ciph_all_letters_valgrind
+[PASS] grading_valgrind::encrypt_ciph_all_letters_valgrind: (0.50s)
+[RUN ] grading_valgrind::encrypt_full_msg1_valgrind
+[PASS] grading_valgrind::encrypt_full_msg1_valgrind: (1.60s)
+[RUN ] grading_valgrind::encrypt_full_msg2_valgrind
+[----] ../../../tests/unit_tests.c:37: Assertion Failed
+[----]   
+[----]   Valgrind reported errors -- see tests.out/grading_encrypt_full_msg2.log
+[----]   
+==96939== Memcheck, a memory error detector
+==96939== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==96939== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==96939== Command: ./bin/grading_encrypt_full_msg2
+==96939== 
+==96939== Source and destination overlap in strcat(0x1ffefff8d0, 0x1ffefff940)
+==96939==    at 0x484EAD0: strcat (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==96939==    by 0x109998: encrypt (bacon.c:70)
+==96939==    by 0x109423: main (grading_encrypt_full_msg2.c:6)
+==96939== 
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: 7/4/2023 CELEBRATE!
+indexOf input text: 48
+indexOf input text: 40
+indexOf input text: 45
+indexOf input text: 40
+indexOf input text: 43
+indexOf input text: 41
+indexOf input text: 43
+indexOf input text: 44
+indexOf input text: 26
+indexOf input text: 2
+indexOf input text: 4
+indexOf input text: 11
+indexOf input text: 4
+indexOf input text: 1
+indexOf input text: 17
+indexOf input text: 0
+indexOf input text: 19
+indexOf input text: 4
+indexOf input text: 27
+indexOf input text: -1
+returned -1
+==96939== 
+==96939== HEAP SUMMARY:
+==96939==     in use at exit: 0 bytes in 0 blocks
+==96939==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==96939== 
+==96939== All heap blocks were freed -- no leaks are possible
+==96939== 
+==96939== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==96939== 
+==96939== 1 errors in context 1 of 1:
+==96939== Source and destination overlap in strcat(0x1ffefff8d0, 0x1ffefff940)
+==96939==    at 0x484EAD0: strcat (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==96939==    by 0x109998: encrypt (bacon.c:70)
+==96939==    by 0x109423: main (grading_encrypt_full_msg2.c:6)
+==96939== 
+==96939== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+[FAIL] grading_valgrind::encrypt_full_msg2_valgrind: (0.52s)
+[RUN ] grading_valgrind::encrypt_full_msg3_valgrind
+[----] ../../../tests/unit_tests.c:37: Assertion Failed
+[----]   
+[----]   Valgrind reported errors -- see tests.out/grading_encrypt_full_msg3.log
+[----]   
+==96947== Memcheck, a memory error detector
+==96947== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==96947== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==96947== Command: ./bin/grading_encrypt_full_msg3
+==96947== 
+==96947== Source and destination overlap in strcat(0x1ffefff8d0, 0x1ffefff940)
+==96947==    at 0x484EAD0: strcat (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==96947==    by 0x1099A0: encrypt (bacon.c:70)
+==96947==    by 0x10942B: main (grading_encrypt_full_msg3.c:6)
+==96947== 
+ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'(),-./0123456789:;?
+inputtext: 7/4/2023 CELEBRATE!
+indexOf input text: 48
+indexOf input text: 40
+indexOf input text: 45
+indexOf input text: 40
+indexOf input text: 43
+indexOf input text: 41
+indexOf input text: 43
+indexOf input text: 44
+indexOf input text: 26
+indexOf input text: 2
+indexOf input text: 4
+indexOf input text: 11
+indexOf input text: 4
+indexOf input text: 1
+indexOf input text: 17
+indexOf input text: 0
+indexOf input text: 19
+indexOf input text: 4
+indexOf input text: 27
+indexOf input text: -1
+returned -1
+==96947== 
+==96947== HEAP SUMMARY:
+==96947==     in use at exit: 0 bytes in 0 blocks
+==96947==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==96947== 
+==96947== All heap blocks were freed -- no leaks are possible
+==96947== 
+==96947== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==96947== 
+==96947== 1 errors in context 1 of 1:
+==96947== Source and destination overlap in strcat(0x1ffefff8d0, 0x1ffefff940)
+==96947==    at 0x484EAD0: strcat (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==96947==    by 0x1099A0: encrypt (bacon.c:70)
+==96947==    by 0x10942B: main (grading_encrypt_full_msg3.c:6)
+==96947== 
+==96947== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+[FAIL] grading_valgrind::encrypt_full_msg3_valgrind: (0.51s)
+[RUN ] grading_valgrind::encrypt_one_char_valgrind
+[PASS] grading_valgrind::encrypt_one_char_valgrind: (0.53s)
+[RUN ] grading_valgrind::encrypt_symbols_valgrind
+[PASS] grading_valgrind::encrypt_symbols_valgrind: (0.50s)
+[----] Writing json report in `test_results.json`.
+[====] Synthesis: Tested: 66 | Passing: 30 | Failing: 36 | Crashing: 5 

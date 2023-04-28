@@ -1,0 +1,287 @@
+[----] Criterion v2.4.0
+[====] Running 7 tests from base_output:
+[RUN ] base_output::packetize02
+[----]   Packetize a message that is too large to completely packetize.
+[RUN ] base_output::packetize01
+[----]   Packetize a short message. packets[] is the optimal length.
+[RUN ] base_output::print_packet01
+[----]   Print the contents of a packet
+[PASS] base_output::packetize01: (0.00s)
+0th packet: 0000003039000001093b2040000000100000001d000149f14142434445
+1th packet: 0000003039000001093b2040000005100000001d000149f6464748494a
+2th packet: 0000003039000001093b204000000a100000001a000149f84b4c
+[PASS] base_output::packetize02: (0.01s)
+[PASS] base_output::print_packet01: (0.01s)
+[RUN ] base_output::reconstruct01
+[----]   Function given more than enough memory to reconstruct the message.
+0th packet: 012a05f20003d77a050020400000000109000029017ff897546865207369676874206f66206120646f
+1th packet: 012a05f20003d77a050020400000110109000029017ff8a87a656e2070617469656e74732073697474
+2th packet: 012a05f20003d77a050020400000220109000029017ff8b9696e6720696e207468652077616974696e
+3th packet: 012a05f20003d77a050020400000330109000029017ff8ca6720726f6f6d2c20656163682077656172
+[PASS] base_output::reconstruct01: (0.00s)
+
+message: There are two ways to write error-free programs; only the third one works. - Alan J. Perlis
+[RUN ] base_output::reconstruct02
+[----]   Function not given enough memory to reconstruct the message.
+[====] Running 7 tests from base_return:
+[RUN ] base_output::reconstruct03
+[----]   Function given more memory than needed, but some packets are corrupted.
+[RUN ] base_output::reconstruct04
+[----]   First and last packets, and a middle packet, are corrupted.
+[PASS] base_output::reconstruct02: (0.01s)
+[PASS] base_output::reconstruct03: (0.00s)
+
+message: There are two ways to write error-free programs; only the t
+
+message: @@@@@@@@@@@@o ways to wr@@@@@@@@@@@@ee programs; only the third one work@@@@@@@@@@@@ Perlis
+[PASS] base_output::reconstruct04: (0.00s)
+
+message: @@@@@@@@@@@@o ways to wr@@@@@@@@@@@@ee programs; only the third one works. - Alan J.
+[RUN ] base_return::checksum01
+[----]   Compute a checksum
+[RUN ] base_return::packetize01
+[----]   Packetize a short message. packets[] is the optimal length.
+[RUN ] base_return::packetize02
+[----]   Packetize a message that is too large to completely packetize.
+[PASS] base_return::packetize01: (0.00s)
+0th packet: 0000003039000001093b2040000000100000001d000149f14142434445
+1th packet: 0000003039000001093b2040000005100000001d000149f6464748494a
+2th packet: 0000003039000001093b204000000a100000001a000149f84b4c
+[PASS] base_return::checksum01: (0.00s)
+[PASS] base_return::packetize02: (0.01s)
+[RUN ] base_return::reconstruct01
+[----]   Function given more than enough memory to reconstruct the message.
+0th packet: 012a05f20003d77a050020400000000109000029017ff897546865207369676874206f66206120646f
+1th packet: 012a05f20003d77a050020400000110109000029017ff8a87a656e2070617469656e74732073697474
+2th packet: 012a05f20003d77a050020400000220109000029017ff8b9696e6720696e207468652077616974696e
+3th packet: 012a05f20003d77a050020400000330109000029017ff8ca6720726f6f6d2c20656163682077656172
+[RUN ] base_return::reconstruct02
+[----]   Function not given enough memory to reconstruct the message.
+[RUN ] base_return::reconstruct03
+[----]   Function given more memory than needed, but some packets are corrupted.
+[PASS] base_return::reconstruct01: (0.01s)
+
+message: There are two ways to write error-free programs; only the third one works. - Alan J. Perlis
+[====] Running 6 tests from base_valgrind:
+[PASS] base_return::reconstruct02: (0.00s)
+
+message: There are two ways to write error-free programs; only the t
+[RUN ] base_return::reconstruct04
+[----]   First and last packets, and a middle packet, are corrupted.
+[PASS] base_return::reconstruct03: (0.01s)
+[RUN ] base_valgrind::packetize01
+
+message: @@@@@@@@@@@@o ways to wr@@@@@@@@@@@@ee programs; only the third one work@@@@@@@@@@@@ Perlis
+[PASS] base_return::reconstruct04: (0.01s)
+
+message: íá:+wFáŸjìX∆o ways to wr.|M'ysè∫©yƒ7ee programs; only the third one works. - Alan J.
+[RUN ] base_valgrind::packetize02
+[RUN ] base_valgrind::reconstruct01
+[RUN ] base_valgrind::reconstruct02
+[PASS] base_valgrind::packetize01: (0.55s)
+[RUN ] base_valgrind::reconstruct03
+[PASS] base_valgrind::packetize02: (0.56s)
+[RUN ] base_valgrind::reconstruct04
+[PASS] base_valgrind::reconstruct01: (0.60s)
+[====] Running 15 tests from grading_output:
+[RUN ] grading_output::packetize01
+[----]   Packetize a short message. packets[] is the optimal length.
+[PASS] base_valgrind::reconstruct02: (0.61s)
+[PASS] grading_output::packetize01: (0.01s)
+0th packet: 38918a27311e82cab0292040000000031f0000241454db54546865726520617265207477
+1th packet: 38918a27311e82cab029204000000c031f0000241454db606f207761797320746f207772
+2th packet: 38918a27311e82cab0292040000018031f0000241454db6c697465206572726f722d6672
+3th packet: 38918a27311e82cab0292040000024031f0000241454db7865652070726f6772616d733b
+4th packet: 38918a27311e82cab0292040000030031f0000241454db84206f6e6c7920746865207468
+5th packet: 38918a27311e82cab029204000003c031f0000241454db90697264206f6e6520776f726b
+6th packet: 38918a27311e82cab0292040000048031f0000241454db9c732e202d20416c616e204a2e
+7th packet: 38918a27311e82cab0292040000054031f00001f1454dba3205065726c6973
+[RUN ] grading_output::packetize02
+[----]   Message stored in one packet. max_payload smaller than needed.
+[RUN ] grading_output::packetize03
+[----]   Message fits in one packet. max_payload larger than needed.
+[PASS] grading_output::packetize02: (0.00s)
+[PASS] grading_output::packetize03: (0.00s)
+0th packet: 0091efc760821ecab029204000000000dc000054b0ba799b4320697320717569726b792c20666c617765642c20616e6420616e20656e6f726d6f757320737563636573732e202844656e6e697320526974636869
+0th packet: 0091efc760821ecab029204000000000dc000056b0ba799d4320697320717569726b792c20666c617765642c20616e6420616e20656e6f726d6f757320737563636573732e202844656e6e6973205269746368696529
+[RUN ] grading_output::packetize04
+[----]   Message fits in one packet. max_payload exactly the right size.
+[RUN ] grading_output::packetize05
+[----]   Message fits in one packet plus one extra packet for final character of message.
+[----] ../../../tests/unit_tests.c:72: Assertion Failed
+[----]   
+[----]   Contents of packet #0 incorrect. See unit_tests.c or grading_tests.c for expected packet contents.
+[----]   
+[FAIL] grading_output::packetize04: (0.00s)
+[PASS] grading_output::packetize05: (0.00s)
+0th packet: 91e00fc760821721232920400000001130000018f730fd44
+Expected:
+91e00fc760821721232920400000001130000056f730fd824320697320717569726b792c20666c617765642c20616e6420616e20656e6f726d6f757320737563636573732e202844656e6e6973205269746368696529
+Actual:
+91e00fc760821721232920400000001130000018f730fd4421060000000000003082060b308203f3a003020102020100300d06092a864886f70d01010b05003081a6310b3009060355040613024752310f300d060355
+0th packet: 631632245680032cdabf20400000002e12000081195f2eeb4966204a617661206861642074727565206761726261676520636f6c6c656374696f6e2c206d6f73742070726f6772616d7320776f756c642064656c657465207468656d73656c7665732075706f6e20657865637574696f6e2e202a526f6265727420536577656c6c
+1th packet: 631632245680032cdabf20400000692e12000019195f2eec2a
+[RUN ] grading_output::packetize06
+[----]   Message split across multiple packets. packets[] is longer than needed.
+[RUN ] grading_output::print_packet01
+[----]   Print the contents of a packet
+[PASS] grading_output::packetize06: (0.01s)
+0th packet: 631632245680032cdabf20400000002e12000031195f2e9b4966204a617661206861642074727565206761726261676520
+1th packet: 631632245680032cdabf20400000192e12000031195f2eb4636f6c6c656374696f6e2c206d6f73742070726f6772616d73
+2th packet: 631632245680032cdabf20400000322e12000031195f2ecd20776f756c642064656c657465207468656d73656c76657320
+3th packet: 631632245680032cdabf204000004b2e12000031195f2ee675706f6e20657865637574696f6e2e202a526f626572742053
+4th packet: 631632245680032cdabf20400000642e1200001e195f2eec6577656c6c2a
+[PASS] grading_output::print_packet01: (0.02s)
+[RUN ] grading_output::reconstruct01
+[----]   Function given more than enough memory to store the entire message.
+[PASS] grading_output::reconstruct01: (0.00s)
+
+message: Pablo Picasso: Computers are useless. They can only give you answers.
+[RUN ] grading_output::reconstruct02
+[----]   Function given exactly enough memory to store the entire message.
+[PASS] grading_output::reconstruct02: (0.00s)
+[RUN ] grading_output::reconstruct03
+[----]   Function given a few bytes byte of memory less than needed to store the entire message.
+
+message: I always cook with wine. Sometimes I even add it to the food.  -W.C. Fields-
+[PASS] grading_output::reconstruct03: (0.00s)
+
+message: It's no use going back to yesterday, because I was a different person then. *Lewis C
+[RUN ] grading_output::reconstruct04
+[----]   Function given only two bytes of memory to store the message.
+[RUN ] grading_output::reconstruct05
+[----]   Function not given enough memory to store the entire message, and first packet corrupted.
+[PASS] grading_output::reconstruct04: (0.00s)
+[PASS] grading_output::reconstruct05: (0.00s)
+
+message: V
+
+message: &&&&&&&&&st you don't succeed, then skydiving isn'
+[RUN ] grading_output::reconstruct06
+[----]   Function given more memory than needed, but last two packets are corrupted.
+[RUN ] grading_output::reconstruct07
+[----]   Function given more memory than needed, but packets 1, 3, 4 are corrupted.
+[PASS] grading_output::reconstruct06: (0.00s)
+[PASS] grading_output::reconstruct07: (0.00s)
+
+message: Donald Ervin Knuth is an American computer scientist, mathematician, and professor emeri
+
+message: Donald Ervin Knuth is XXXXXXXXXXXXXXXXXXXXXXcientist, mathematiciaXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXsity.
+[====] Running 15 tests from grading_return:
+[RUN ] grading_output::reconstruct08
+[----]   Function given more than enough memory to store the entire message.
+[RUN ] grading_return::checksum01
+[----]   Compute a checksum
+[PASS] grading_output::reconstruct08: (0.00s)
+[PASS] grading_return::checksum01: (0.00s)
+
+message: There are two ways of constructing a software design.  One way is to make it so simple that there are obviously no deficiencies. And the other way is to make it so complicated that there are no obvious deficiencies. (C.A.R. Hoare)
+[RUN ] grading_return::packetize01
+[----]   Packetize a short message. packets[] is the optimal length.
+[RUN ] grading_return::packetize02
+[----]   Message stored in one packet. max_payload smaller than needed.
+[PASS] grading_return::packetize01: (0.00s)
+[PASS] grading_return::packetize02: (0.00s)
+0th packet: 38918a27311e82cab0292040000000031f0000241454db54546865726520617265207477
+1th packet: 38918a27311e82cab029204000000c031f0000241454db606f207761797320746f207772
+2th packet: 38918a27311e82cab0292040000018031f0000241454db6c697465206572726f722d6672
+3th packet: 38918a27311e82cab0292040000024031f0000241454db7865652070726f6772616d733b
+4th packet: 38918a27311e82cab0292040000030031f0000241454db84206f6e6c7920746865207468
+5th packet: 38918a27311e82cab029204000003c031f0000241454db90697264206f6e6520776f726b
+6th packet: 38918a27311e82cab0292040000048031f0000241454db9c732e202d20416c616e204a2e
+7th packet: 38918a27311e82cab0292040000054031f00001f1454dba3205065726c6973
+0th packet: 0091efc760821ecab029204000000000dc000054b0ba799b4320697320717569726b792c20666c617765642c20616e6420616e20656e6f726d6f757320737563636573732e202844656e6e697320526974636869
+[RUN ] grading_return::packetize03
+[----]   Message fits in one packet. max_payload larger than needed.
+[PASS] grading_return::packetize03: (0.00s)
+0th packet: 0091efc760821ecab029204000000000dc000056b0ba799d4320697320717569726b792c20666c617765642c20616e6420616e20656e6f726d6f757320737563636573732e202844656e6e6973205269746368696529
+[RUN ] grading_return::packetize04
+[----]   Message fits in one packet. max_payload exactly the right size.
+[PASS] grading_return::packetize04: (0.00s)
+0th packet: 91e00fc760821721232920400000001130000018f730fd44
+[RUN ] grading_return::packetize05
+[----]   Message fits in one packet plus one extra packet for final character of message.
+[RUN ] grading_return::packetize06
+[----]   Message split across multiple packets. packets[] is longer than needed.
+[PASS] grading_return::packetize05: (0.00s)
+0th packet: 631632245680032cdabf20400000002e12000081195f2eeb4966204a617661206861642074727565206761726261676520636f6c6c656374696f6e2c206d6f73742070726f6772616d7320776f756c642064656c657465207468656d73656c7665732075706f6e20657865637574696f6e2e202a526f6265727420536577656c6c
+1th packet: 631632245680032cdabf20400000692e12000019195f2eec2a
+[PASS] grading_return::packetize06: (0.00s)
+0th packet: 631632245680032cdabf20400000002e12000031195f2e9b4966204a617661206861642074727565206761726261676520
+1th packet: 631632245680032cdabf20400000192e12000031195f2eb4636f6c6c656374696f6e2c206d6f73742070726f6772616d73
+2th packet: 631632245680032cdabf20400000322e12000031195f2ecd20776f756c642064656c657465207468656d73656c76657320
+3th packet: 631632245680032cdabf204000004b2e12000031195f2ee675706f6e20657865637574696f6e2e202a526f626572742053
+4th packet: 631632245680032cdabf20400000642e1200001e195f2eec6577656c6c2a
+[RUN ] grading_return::reconstruct01
+[----]   Function given more than enough memory to store the entire message.
+[PASS] grading_return::reconstruct01: (0.01s)
+[RUN ] grading_return::reconstruct02
+[----]   Function given exactly enough memory to store the entire message.
+
+message: Pablo Picasso: Computers are useless. They can only give you answers.
+[PASS] grading_return::reconstruct02: (0.00s)
+
+message: I always cook with wine. Sometimes I even add it to the food.  -W.C. Fields-
+[RUN ] grading_return::reconstruct03
+[----]   Function given a few bytes of memory less than needed to store the entire message.
+[PASS] grading_return::reconstruct03: (0.00s)
+
+message: It's no use going back to yesterday, because I was a different person then. *Lewis C
+[RUN ] grading_return::reconstruct04
+[----]   Function given only two bytes of memory to store the message.
+[PASS] grading_return::reconstruct04: (0.00s)
+
+message: V
+[RUN ] grading_return::reconstruct05
+[----]   Function not given enough memory to store the entire message, and first packet corrupted.
+[RUN ] grading_return::reconstruct06
+[----]   Function given more memory than needed, but last two packets are corrupted.
+[PASS] grading_return::reconstruct05: (0.00s)
+[PASS] grading_return::reconstruct06: (0.00s)
+
+message: &&&&&&&&&st you don't succeed, then skydiving isn'
+
+message: Donald Ervin Knuth is an American computer scientist, mathematician, and professor emeri
+[RUN ] grading_return::reconstruct07
+[----]   Function given more memory than needed, but packets 1, 3, 4 are corrupted.
+[RUN ] grading_return::reconstruct08
+[----]   Function given more than enough memory to store the entire message.
+[PASS] grading_return::reconstruct07: (0.00s)
+
+message: Donald Ervin Knuth is XXXXXXXXXXXXXXXXXXXXXXcientist, mathematiciaXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXsity.
+[PASS] grading_return::reconstruct08: (0.00s)
+[====] Running 14 tests from grading_valgrind:
+
+message: There are two ways of constructing a software design.  One way is to make it so simple that there are obviously no deficiencies. And the other way is to make it so complicated that there are no obvious deficiencies. (C.A.R. Hoare)
+[RUN ] grading_valgrind::packetize01
+[RUN ] grading_valgrind::packetize02
+[PASS] base_valgrind::reconstruct04: (0.58s)
+[RUN ] grading_valgrind::packetize03
+[PASS] base_valgrind::reconstruct03: (0.63s)
+[RUN ] grading_valgrind::packetize04
+[PASS] grading_valgrind::packetize02: (0.55s)
+[RUN ] grading_valgrind::packetize05
+[PASS] grading_valgrind::packetize01: (0.60s)
+[RUN ] grading_valgrind::packetize06
+[PASS] grading_valgrind::packetize03: (0.59s)
+[RUN ] grading_valgrind::reconstruct01
+[PASS] grading_valgrind::packetize04: (0.61s)
+[RUN ] grading_valgrind::reconstruct02
+[PASS] grading_valgrind::packetize05: (0.57s)
+[RUN ] grading_valgrind::reconstruct03
+[PASS] grading_valgrind::packetize06: (0.64s)
+[RUN ] grading_valgrind::reconstruct04
+[PASS] grading_valgrind::reconstruct01: (0.59s)
+[RUN ] grading_valgrind::reconstruct05
+[PASS] grading_valgrind::reconstruct02: (0.61s)
+[RUN ] grading_valgrind::reconstruct06
+[PASS] grading_valgrind::reconstruct03: (0.56s)
+[RUN ] grading_valgrind::reconstruct07
+[PASS] grading_valgrind::reconstruct04: (0.57s)
+[RUN ] grading_valgrind::reconstruct08
+[PASS] grading_valgrind::reconstruct05: (0.56s)
+[PASS] grading_valgrind::reconstruct06: (0.57s)
+[PASS] grading_valgrind::reconstruct07: (0.54s)
+[PASS] grading_valgrind::reconstruct08: (0.54s)
+[----] Writing json report in `test_results.json`.
+[====] Synthesis: Tested: 64 | Passing: 63 | Failing: 1 | Crashing: 0 

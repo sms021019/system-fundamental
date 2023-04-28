@@ -1,0 +1,65 @@
+encrypt_three_chars,PASSED,2
+encrypt_full_msg,FAILED,0
+encrypt_empty_string,FAILED,0
+encrypt_EOM_only,PASSED,2
+decrypt_three_chars,FAILED,0
+decrypt_partial_msg,FAILED,0
+decrypt_full_msg,FAILED,0
+encrypt_three_chars,PASSED,1
+encrypt_full_msg,FAILED,0
+encrypt_empty_string,FAILED,0
+encrypt_EOM_only,PASSED,1
+decrypt_three_chars,PASSED,1
+decrypt_partial_msg,FAILED,0
+decrypt_full_msg,PASSED,1
+encrypt_three_chars_valgrind,PASSED,1
+encrypt_full_msg_valgrind,PASSED - NO CREDIT,0
+encrypt_empty_string_valgrind,PASSED - NO CREDIT,0
+encrypt_EOM_only_valgrind,PASSED,1
+decrypt_three_chars_valgrind,PASSED,1
+decrypt_partial_msg_valgrind,FAILED,0
+decrypt_full_msg_valgrind,PASSED,1
+encrypt_symbols,FAILED,0
+encrypt_one_char,PASSED,4
+encrypt_full_msg3,FAILED,0
+encrypt_full_msg2,FAILED,0
+encrypt_full_msg1,FAILED,0
+encrypt_ciph_all_letters,FAILED,0
+encrypt_EOM_only,FAILED,0
+decrypt_symbols,FAILED,0
+decrypt_partial_msg,FAILED,0
+decrypt_full_msg3,FAILED,0
+decrypt_full_msg2,FAILED,0
+decrypt_full_msg1,FAILED,0
+decrypt_eom_in_middle,FAILED,0
+encrypt_insufficient_space,PASSED,2
+encrypt_ciph_all_non_letters,PASSED,2
+decrypt_no_EOM2,FAILED,0
+decrypt_no_EOM1,FAILED,0
+decrypt_invalid_msg,FAILED,0
+decrypt_empty_msg,PASSED,2
+encrypt_symbols,FAILED,0
+encrypt_one_char,PASSED,2
+encrypt_full_msg3,FAILED,0
+encrypt_full_msg2,FAILED,0
+encrypt_full_msg1,FAILED,0
+encrypt_ciph_all_letters,FAILED,0
+encrypt_EOM_only,FAILED,0
+decrypt_symbols,PASSED,2
+decrypt_partial_msg,FAILED,0
+decrypt_full_msg3,FAILED,0
+decrypt_full_msg2,FAILED,0
+decrypt_full_msg1,FAILED,0
+decrypt_eom_in_middle,FAILED,0
+encrypt_symbols_valgrind,PASSED - NO CREDIT,0
+encrypt_one_char_valgrind,PASSED,1
+encrypt_full_msg3_valgrind,encrypt_full_msg2_valgrind,encrypt_full_msg1_valgrind,FAILED,0
+encrypt_ciph_all_letters_valgrind,PASSED - NO CREDIT,0
+encrypt_EOM_only_valgrind,PASSED - NO CREDIT,0
+decrypt_symbols_valgrind,PASSED,1
+decrypt_partial_msg_valgrind,PASSED - NO CREDIT,0
+decrypt_full_msg3_valgrind,PASSED - NO CREDIT,0
+decrypt_full_msg2_valgrind,PASSED - NO CREDIT,0
+decrypt_full_msg1_valgrind,PASSED - NO CREDIT,0
+decrypt_eom_in_middle_valgrind,PASSED - NO CREDIT,0
+TOTAL,,28

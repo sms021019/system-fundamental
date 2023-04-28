@@ -1,0 +1,181 @@
+[----] Criterion v2.4.0
+[====] Running 13 tests from base_suite:
+[RUN ] base_suite::test_output01
+[PASS] base_suite::test_output01: (0.01s)
+[RUN ] base_suite::test_output02
+[PASS] base_suite::test_output02: (0.01s)
+[RUN ] base_suite::test_output03
+[PASS] base_suite::test_output03: (0.01s)
+[RUN ] base_suite::test_output04
+[PASS] base_suite::test_output04: (0.01s)
+[RUN ] base_suite::test_output05
+[PASS] base_suite::test_output05: (0.01s)
+[RUN ] base_suite::test_output06
+[PASS] base_suite::test_output06: (0.01s)
+[RUN ] base_suite::test_output07
+[PASS] base_suite::test_output07: (0.01s)
+[RUN ] base_suite::test_output08
+[PASS] base_suite::test_output08: (0.01s)
+[RUN ] base_suite::test_output09
+[PASS] base_suite::test_output09: (0.01s)
+[RUN ] base_suite::test_output10
+[PASS] base_suite::test_output10: (0.01s)
+[RUN ] base_suite::test_output11
+[PASS] base_suite::test_output11: (0.01s)
+[RUN ] base_suite::test_output12
+[PASS] base_suite::test_output12: (0.01s)
+[RUN ] base_suite::test_output13
+[PASS] base_suite::test_output13: (0.01s)
+[====] Running 27 tests from grading_suite:
+[RUN ] grading_suite::grading_output01
+1c1
+< 0000abcd
+---
+> 0000abce
+[----] tests.c:27: Assertion Failed
+[----]   
+[----]   The output was not what was expected (diff exited with status 1).
+[----]   
+[FAIL] grading_suite::grading_output01: (0.01s)
+[RUN ] grading_suite::grading_output02
+1c1
+< 0067fcdb
+---
+> ff980324
+[----] tests.c:27: Assertion Failed
+[----]   
+[----]   The output was not what was expected (diff exited with status 1).
+[----]   
+[FAIL] grading_suite::grading_output02: (0.01s)
+[RUN ] grading_suite::grading_output03
+[PASS] grading_suite::grading_output03: (0.01s)
+[RUN ] grading_suite::grading_output04
+[PASS] grading_suite::grading_output04: (0.01s)
+[RUN ] grading_suite::grading_output05
+1c1
+< cff91024
+---
+> cff91023
+[----] tests.c:27: Assertion Failed
+[----]   
+[----]   The output was not what was expected (diff exited with status 1).
+[----]   
+[FAIL] grading_suite::grading_output05: (0.01s)
+[RUN ] grading_suite::grading_output06
+[PASS] grading_suite::grading_output06: (0.01s)
+[RUN ] grading_suite::grading_output07
+[PASS] grading_suite::grading_output07: (0.01s)
+[RUN ] grading_suite::grading_output08
+[PASS] grading_suite::grading_output08: (0.01s)
+[RUN ] grading_suite::grading_output09
+1c1
+< 95074ffd
+---
+> 15074ffd
+[----] tests.c:27: Assertion Failed
+[----]   
+[----]   The output was not what was expected (diff exited with status 1).
+[----]   
+[FAIL] grading_suite::grading_output09: (0.01s)
+[RUN ] grading_suite::grading_output10
+[PASS] grading_suite::grading_output10: (0.01s)
+[RUN ] grading_suite::grading_output11
+[PASS] grading_suite::grading_output11: (0.01s)
+[RUN ] grading_suite::grading_output12
+1c1
+< 00000000
+---
+> 80000000
+[----] tests.c:27: Assertion Failed
+[----]   
+[----]   The output was not what was expected (diff exited with status 1).
+[----]   
+[FAIL] grading_suite::grading_output12: (0.01s)
+[RUN ] grading_suite::grading_output13
+1c1
+< 00000000
+---
+> 7fffffff
+[----] tests.c:27: Assertion Failed
+[----]   
+[----]   The output was not what was expected (diff exited with status 1).
+[----]   
+[FAIL] grading_suite::grading_output13: (0.01s)
+[RUN ] grading_suite::grading_output14
+[PASS] grading_suite::grading_output14: (0.01s)
+[RUN ] grading_suite::grading_output15
+[PASS] grading_suite::grading_output15: (0.01s)
+[RUN ] grading_suite::grading_output16
+[PASS] grading_suite::grading_output16: (0.01s)
+[RUN ] grading_suite::grading_output17
+1c1
+< c460a004
+---
+> undefined
+[----] tests.c:27: Assertion Failed
+[----]   
+[----]   The output was not what was expected (diff exited with status 1).
+[----]   
+[FAIL] grading_suite::grading_output17: (0.01s)
+[RUN ] grading_suite::grading_output18
+1c1
+< 00000000
+---
+> ffffffff
+[----] tests.c:27: Assertion Failed
+[----]   
+[----]   The output was not what was expected (diff exited with status 1).
+[----]   
+[FAIL] grading_suite::grading_output18: (0.01s)
+[RUN ] grading_suite::grading_output19
+[PASS] grading_suite::grading_output19: (0.01s)
+[RUN ] grading_suite::grading_output20
+[PASS] grading_suite::grading_output20: (0.02s)
+[RUN ] grading_suite::grading_output21
+1c1
+< 00000000
+---
+> c0000000
+[----] tests.c:27: Assertion Failed
+[----]   
+[----]   The output was not what was expected (diff exited with status 1).
+[----]   
+[FAIL] grading_suite::grading_output21: (0.01s)
+[RUN ] grading_suite::grading_output22
+1c1
+< undefined
+---
+> fffffff8
+[----] tests.c:27: Assertion Failed
+[----]   
+[----]   The output was not what was expected (diff exited with status 1).
+[----]   
+[FAIL] grading_suite::grading_output22: (0.01s)
+[RUN ] grading_suite::grading_output23
+[PASS] grading_suite::grading_output23: (0.01s)
+[RUN ] grading_suite::grading_output24
+[PASS] grading_suite::grading_output24: (0.01s)
+[RUN ] grading_suite::grading_output25
+[PASS] grading_suite::grading_output25: (0.01s)
+[RUN ] grading_suite::grading_output26
+1c1
+< error
+---
+> 000023fd
+[----] tests.c:27: Assertion Failed
+[----]   
+[----]   The output was not what was expected (diff exited with status 1).
+[----]   
+[FAIL] grading_suite::grading_output26: (0.01s)
+[RUN ] grading_suite::grading_output27
+1c1
+< error
+---
+> ffe4eafa
+[----] tests.c:27: Assertion Failed
+[----]   
+[----]   The output was not what was expected (diff exited with status 1).
+[----]   
+[FAIL] grading_suite::grading_output27: (0.02s)
+[----] Writing json report in `../part2_results.json`.
+[====] Synthesis: Tested: 40 | Passing: 28 | Failing: 12 | Crashing: 0 

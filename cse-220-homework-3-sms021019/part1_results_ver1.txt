@@ -1,0 +1,40 @@
+╷
+├─ JUnit Jupiter ✔
+├─ JUnit Vintage ✔
+│  └─ FloatDecomposeTests ✔
+│     ├─ test_getExponent_grading1 ✔
+│     ├─ test_getExponent_grading2 ✔
+│     ├─ test_makeFloat1 ✔
+│     ├─ test_makeFloat2 ✔
+│     ├─ test_makeFloat3 ✔
+│     ├─ test_getFraction1 ✔
+│     ├─ test_getFraction2 ✔
+│     ├─ test_getFraction3 ✔
+│     ├─ test_getExponent1 ✔
+│     ├─ test_getExponent2 ✔
+│     ├─ test_getExponent3 ✔
+│     ├─ test_getSign1 ✔
+│     ├─ test_getSign2 ✔
+│     ├─ test_getSign3 ✔
+│     ├─ test_getFraction_grading1 ✔
+│     ├─ test_getFraction_grading2 ✔
+│     ├─ test_getSign_grading1 ✔
+│     ├─ test_getSign_grading2 ✔
+│     ├─ test_makeFloat_grading1 ✔
+│     └─ test_makeFloat_grading2 ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 88 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        20 tests found           ]
+[         0 tests skipped         ]
+[        20 tests started         ]
+[         0 tests aborted         ]
+[        20 tests successful      ]
+[         0 tests failed          ]
+

@@ -1,0 +1,263 @@
+{
+  "id": "Criterion v2.4.0",
+  "passed": 28,
+  "failed": 12,
+  "errored": 0,
+  "skipped": 0,
+  "test_suites": [
+    {
+      "name": "grading_suite",
+      "passed": 15,
+      "failed": 12,
+      "errored": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "grading_output27",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "tests.c:27: The output was not what was expected (diff exited with status 1)."
+          ]
+        },
+        {
+          "name": "grading_output26",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "tests.c:27: The output was not what was expected (diff exited with status 1)."
+          ]
+        },
+        {
+          "name": "grading_output25",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output24",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output23",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output22",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "tests.c:27: The output was not what was expected (diff exited with status 1)."
+          ]
+        },
+        {
+          "name": "grading_output21",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "tests.c:27: The output was not what was expected (diff exited with status 1)."
+          ]
+        },
+        {
+          "name": "grading_output20",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output19",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output18",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "tests.c:27: The output was not what was expected (diff exited with status 1)."
+          ]
+        },
+        {
+          "name": "grading_output17",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "tests.c:27: The output was not what was expected (diff exited with status 1)."
+          ]
+        },
+        {
+          "name": "grading_output16",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output15",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output14",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output13",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "tests.c:27: The output was not what was expected (diff exited with status 1)."
+          ]
+        },
+        {
+          "name": "grading_output12",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "tests.c:27: The output was not what was expected (diff exited with status 1)."
+          ]
+        },
+        {
+          "name": "grading_output11",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output10",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output09",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "tests.c:27: The output was not what was expected (diff exited with status 1)."
+          ]
+        },
+        {
+          "name": "grading_output08",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output07",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output06",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output05",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "tests.c:27: The output was not what was expected (diff exited with status 1)."
+          ]
+        },
+        {
+          "name": "grading_output04",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output03",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "grading_output02",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "tests.c:27: The output was not what was expected (diff exited with status 1)."
+          ]
+        },
+        {
+          "name": "grading_output01",
+          "assertions": 1,
+          "status": "FAILED",
+          "messages": [
+            "tests.c:27: The output was not what was expected (diff exited with status 1)."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "base_suite",
+      "passed": 13,
+      "failed": 0,
+      "errored": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "test_output13",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "test_output12",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "test_output11",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "test_output10",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "test_output09",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "test_output08",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "test_output07",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "test_output06",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "test_output05",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "test_output04",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "test_output03",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "test_output02",
+          "assertions": 1,
+          "status": "PASSED"
+        },
+        {
+          "name": "test_output01",
+          "assertions": 1,
+          "status": "PASSED"
+        }
+      ]
+    }
+  ]
+}
