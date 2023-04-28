@@ -1,0 +1,177 @@
+[----] Criterion v2.4.1
+[====] Running 2 tests from base_create_matrix:
+[RUN ] base_create_matrix::create01
+[----]   Create an 8x1 matrix
+[PASS] base_create_matrix::create01: (0.00s)
+[RUN ] base_create_matrix::create02
+[----]   Create a 7x3 matrix
+[PASS] base_create_matrix::create02: (0.00s)
+[====] Running 3 tests from base_evaluate_expr:
+[RUN ] base_evaluate_expr::expr01
+[----]   Given root of a tree, evaluation of an expression
+[PASS] base_evaluate_expr::expr01: (0.00s)
+[RUN ] base_evaluate_expr::expr02
+[----]   Given root of a tree, evaluation of an expression
+[PASS] base_evaluate_expr::expr02: (0.00s)
+[RUN ] base_evaluate_expr::expr03
+[----]   Given root of a tree, evaluation of an expression
+[PASS] base_evaluate_expr::expr03: (0.00s)
+[====] Running 20 tests from base_execute:
+[RUN ] base_execute::add_mats01
+[PASS] base_execute::add_mats01: (0.01s)
+[RUN ] base_execute::add_mats02
+[PASS] base_execute::add_mats02: (0.01s)
+[RUN ] base_execute::add_mats03
+[PASS] base_execute::add_mats03: (0.01s)
+[RUN ] base_execute::mult_mats01
+[PASS] base_execute::mult_mats01: (0.01s)
+[RUN ] base_execute::mult_mats02
+[PASS] base_execute::mult_mats02: (0.01s)
+[RUN ] base_execute::mult_mats03
+[PASS] base_execute::mult_mats03: (0.01s)
+[RUN ] base_execute::script10
+[PASS] base_execute::script10: (0.01s)
+[RUN ] base_execute::script11
+[PASS] base_execute::script11: (0.01s)
+[RUN ] base_execute::script12
+[PASS] base_execute::script12: (0.01s)
+[RUN ] base_execute::script13
+[PASS] base_execute::script13: (0.01s)
+[RUN ] base_execute::script14
+[PASS] base_execute::script14: (0.01s)
+[RUN ] base_execute::script15
+[PASS] base_execute::script15: (0.01s)
+[RUN ] base_execute::script16
+[PASS] base_execute::script16: (0.01s)
+[RUN ] base_execute::script17
+[PASS] base_execute::script17: (0.01s)
+[RUN ] base_execute::script18
+[PASS] base_execute::script18: (0.01s)
+[RUN ] base_execute::script19
+[PASS] base_execute::script19: (0.01s)
+[RUN ] base_execute::script20
+[PASS] base_execute::script20: (0.01s)
+[RUN ] base_execute::trans_mat01
+[PASS] base_execute::trans_mat01: (0.01s)
+[RUN ] base_execute::trans_mat02
+[PASS] base_execute::trans_mat02: (0.01s)
+[RUN ] base_execute::trans_mat03
+[PASS] base_execute::trans_mat03: (0.01s)
+[====] Running 20 tests from base_execute_valgrind:
+[RUN ] base_execute_valgrind::add_mats01
+[PASS] base_execute_valgrind::add_mats01: (0.77s)
+[RUN ] base_execute_valgrind::add_mats02
+[PASS] base_execute_valgrind::add_mats02: (0.75s)
+[RUN ] base_execute_valgrind::add_mats03
+[PASS] base_execute_valgrind::add_mats03: (0.61s)
+[RUN ] base_execute_valgrind::mult_mats01
+[PASS] base_execute_valgrind::mult_mats01: (0.74s)
+[RUN ] base_execute_valgrind::mult_mats02
+[PASS] base_execute_valgrind::mult_mats02: (0.60s)
+[RUN ] base_execute_valgrind::mult_mats03
+[PASS] base_execute_valgrind::mult_mats03: (0.69s)
+[RUN ] base_execute_valgrind::script10
+[PASS] base_execute_valgrind::script10: (0.62s)
+[RUN ] base_execute_valgrind::script11
+[PASS] base_execute_valgrind::script11: (0.72s)
+[RUN ] base_execute_valgrind::script12
+[PASS] base_execute_valgrind::script12: (0.64s)
+[RUN ] base_execute_valgrind::script13
+[PASS] base_execute_valgrind::script13: (0.63s)
+[RUN ] base_execute_valgrind::script14
+[PASS] base_execute_valgrind::script14: (0.59s)
+[RUN ] base_execute_valgrind::script15
+[PASS] base_execute_valgrind::script15: (0.60s)
+[RUN ] base_execute_valgrind::script16
+[PASS] base_execute_valgrind::script16: (0.60s)
+[RUN ] base_execute_valgrind::script17
+[PASS] base_execute_valgrind::script17: (0.62s)
+[RUN ] base_execute_valgrind::script18
+[PASS] base_execute_valgrind::script18: (0.64s)
+[RUN ] base_execute_valgrind::script19
+[PASS] base_execute_valgrind::script19: (0.63s)
+[RUN ] base_execute_valgrind::script20
+[PASS] base_execute_valgrind::script20: (0.65s)
+[RUN ] base_execute_valgrind::trans_mat01
+[PASS] base_execute_valgrind::trans_mat01: (0.62s)
+[RUN ] base_execute_valgrind::trans_mat02
+[PASS] base_execute_valgrind::trans_mat02: (0.65s)
+[RUN ] base_execute_valgrind::trans_mat03
+[PASS] base_execute_valgrind::trans_mat03: (0.74s)
+[====] Running 3 tests from base_find_bst:
+[RUN ] base_find_bst::search_bst01
+[----]   Test if find_bst returns the correct matrix.
+[PASS] base_find_bst::search_bst01: (0.00s)
+[RUN ] base_find_bst::search_bst02
+[----]   Test if find_bst returns the correct matrix.
+[PASS] base_find_bst::search_bst02: (0.00s)
+[RUN ] base_find_bst::search_bst03
+[----]   Test if find_bst returns the correct matrix.
+[PASS] base_find_bst::search_bst03: (0.00s)
+[====] Running 3 tests from base_free_bst:
+[RUN ] base_free_bst::free_bst01
+[----]   Test if BST is properly deallocated.
+[PASS] base_free_bst::free_bst01: (0.56s)
+[RUN ] base_free_bst::free_bst02
+[----]   Test if BST is properly deallocated.
+[PASS] base_free_bst::free_bst02: (0.57s)
+[RUN ] base_free_bst::free_bst03
+[----]   Test if BST is properly deallocated.
+[PASS] base_free_bst::free_bst03: (0.55s)
+[====] Running 4 tests from base_infix2postfix:
+[RUN ] base_infix2postfix::infix2postfix01
+[----]   Convert a simple infix expression to posfix
+[PASS] base_infix2postfix::infix2postfix01: (0.00s)
+[RUN ] base_infix2postfix::infix2postfix02
+[----]   Convert a moderately complex expression to posfix
+[PASS] base_infix2postfix::infix2postfix02: (0.00s)
+[RUN ] base_infix2postfix::infix2postfix03
+[----]   Convert a moderately complex expression to posfix
+[PASS] base_infix2postfix::infix2postfix03: (0.00s)
+[RUN ] base_infix2postfix::infix2postfix04
+[----]   Convert a complex expression to posfix
+[PASS] base_infix2postfix::infix2postfix04: (0.00s)
+[====] Running 3 tests from base_insert_bst:
+[RUN ] base_insert_bst::insert_bst01
+[----]   Test if insert_bst_sf creates a valid BST.
+[PASS] base_insert_bst::insert_bst01: (0.00s)
+[RUN ] base_insert_bst::insert_bst02
+[----]   Test if insert_bst_sf creates a valid BST.
+[PASS] base_insert_bst::insert_bst02: (0.00s)
+[RUN ] base_insert_bst::insert_bst03
+[----]   Test if insert_bst_sf creates a valid BST.
+[PASS] base_insert_bst::insert_bst03: (0.00s)
+[====] Running 6 tests from base_operator_return:
+[RUN ] base_operator_return::add01
+[----]   Add 2 3x5 matrices
+[PASS] base_operator_return::add01: (0.00s)
+[RUN ] base_operator_return::add02
+[----]   Add 2 1x4 matrices
+[PASS] base_operator_return::add02: (0.00s)
+[RUN ] base_operator_return::mult01
+[----]   Multiply 2 matrices
+[PASS] base_operator_return::mult01: (0.00s)
+[RUN ] base_operator_return::mult02
+[----]   Multiply 2 matrices
+[PASS] base_operator_return::mult02: (0.00s)
+[RUN ] base_operator_return::trans01
+[----]   Transpose a 4x4 matrix
+[PASS] base_operator_return::trans01: (0.00s)
+[RUN ] base_operator_return::trans02
+[----]   Transpose a 6x3 matrix
+[PASS] base_operator_return::trans02: (0.00s)
+[====] Running 6 tests from base_operator_valgrind:
+[RUN ] base_operator_valgrind::add01
+[PASS] base_operator_valgrind::add01: (0.64s)
+[RUN ] base_operator_valgrind::add02
+[PASS] base_operator_valgrind::add02: (0.56s)
+[RUN ] base_operator_valgrind::mult01
+[PASS] base_operator_valgrind::mult01: (0.63s)
+[RUN ] base_operator_valgrind::mult02
+[PASS] base_operator_valgrind::mult02: (0.56s)
+[RUN ] base_operator_valgrind::trans01
+[PASS] base_operator_valgrind::trans01: (0.57s)
+[RUN ] base_operator_valgrind::trans02
+[PASS] base_operator_valgrind::trans02: (0.60s)
+[----] Writing json report in `test_results.json`.
+[====] Synthesis: Tested: 70 | Passing: 70 | Failing: 0 | Crashing: 0 
